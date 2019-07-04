@@ -164,7 +164,8 @@
     "wpcom": "5.4.0",
     "wpcom-oauth": "0.3.3",
     "wpcom-proxy-request": "4.0.5",
-    "wpcom-xhr-request": "1.1.1"
+    "wpcom-xhr-request": "1.1.1",
+    "snyk": "^1.189.0"
   },
   "engines": {
     "node": "6.11.2",
@@ -232,7 +233,9 @@
     "test-test": "cross-env NODE_ENV=test NODE_PATH=test:client:client/extensions TEST_ROOT=test node test/runner.js",
     "test-test:watch": "nodemon -e js,jsx --exec npm run -s test-test",
     "translate": "i18n-calypso --format pot --output-file ./calypso-strings.pot -e date \"**/*.js\" \"**/*.jsx\" \"!build/**\" \"!node_modules/**\" \"!public/**\" \"!client/extensions/**\"",
-    "update-deps": "npm run -s rm -- node_modules && npm run -s rm -- npm-shrinkwrap.json && npm install && npm install && npm shrinkwrap --dev"
+    "update-deps": "npm run -s rm -- node_modules && npm run -s rm -- npm-shrinkwrap.json && npm install && npm install && npm shrinkwrap --dev",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "devDependencies": {
     "5to6-codemod": "5to6/5to6-codemod#v1.7.0",
@@ -279,5 +282,6 @@
   },
   "optionalDependencies": {
     "fsevents": "1.1.1"
-  }
+  },
+  "snyk": true
 }
