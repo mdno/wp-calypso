@@ -160,7 +160,7 @@
     "webpack": "3.4.1",
     "webpack-dashboard": "0.2.1",
     "webpack-dev-middleware": "1.11.0",
-    "webpack-hot-middleware": "2.15.0",
+    "webpack-hot-middleware": "2.25.1",
     "wpcom": "5.4.0",
     "wpcom-oauth": "0.3.3",
     "wpcom-proxy-request": "4.0.5",
